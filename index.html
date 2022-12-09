@@ -1,1 +1,191 @@
-It works!
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="free anonymous enclosed version control system for light-weigth folder." />
+    <meta name="author" content="AITS" />
+    <meta name="generator" content="VSCode" />
+    <title>Docdo</title>
+	  <link rel="shortcut icon" href="favicon.ico" />
+    <link href="styles/bootstrap.min.css" rel="stylesheet" />
+	  <link href="fonts/bootstrap-icons.css" rel="stylesheet" />
+    <link href="cover.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+      body { font-family: 'Ubuntu', sans-serif; }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .btn-light {
+        background-color: white;
+        color: #00327f;
+        opacity: 0.7;
+      }
+      .btn-light:hover {
+        /* color: #7c92a9; */
+        color: white;
+        background-color: #00327f;
+      }
+      .popover-header {
+        background-color: #00327f;
+        color: white;
+        border: 1px solid #00327f;
+      }
+      .rounded-4 { border-radius: .5rem; }
+      .rounded-5 { border-radius: .75rem; }
+      .rounded-6 { border-radius: 1rem; }
+      /* 타입라이터 */
+      #prompter {
+        border-right: .07em solid;
+        animation: caret 1s steps(1) infinite;
+      }
+      @keyframes caret {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <!--<h3 class="float-md-start mb-0"><i class="bi bi-terminal"></i> <b>doc</b>do&trade;</h3>-->
+	  <h3 class="float-md-start mb-0" style="color: #00327f;"><img src="terminal_folder.png" width="32px" style="margin-top: -7px;" /><b>docdo</b>&trade;</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="docs.php">Docs</a>
+        <a class="nav-link" href="usage.php">Usage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3">
+	<img src="terminal_folder.png" width="88px" />
+	<h1 style="color: #00327f;">Did you create a new folder?</h1>
+  <!-- 타입라이터 -->
+    <div class="py-2" style="border: 3px solid white; border-radius: 5px; background-color: #00327f; color: white; opacity: 0.9;">
+      <div style="float: left;">
+        <!-- <h1>&nbsp;&gt;&nbsp;docdo&nbsp;</h1> -->
+        <h1 class="text-secondary">&nbsp;<img style="position: relative; top: -3px;" src="terminal_folder.png" width="48px" />&nbsp;docdo&nbsp;</h1>
+      </div>
+      <div style="text-align: left;">
+        <h1 id="terminal"></h1>
+      </div>
+    </div>
+    <p class="lead"><!--Load anything you want to your own folder. --><b class="fw-bold">docdo</b>&trade; is a free anonymous enclosed version control system for light-weigth folder running on the CLI. Please don't worry. <b class="fw-bold">docdo</b>&trade; never tracks your personal information and very easy to use. So, what are you going to do from now?</p>
+    <p class="lead" style="text-shadow: none;">
+	  <a href="javascript:void(0);" onclick="copy();" class="btn btn-lg btn-light fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-terminal"></i> Click here to copy the command!</a>
+    </p>
+	<p><a href="https://aits.link/docdo-1gen-installer.exe" data-bs-trigger="hover focus" tabindex="0" class="text-white" data-bs-toggle="popover" title="Download the 1gen installer" data-bs-content="설치 프로그램을 다운로드하여 진행할 수 있으나, PC 보호의 제한이 있을 수 있습니다.">Or download the installer</a></p>
+	
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog"  role="document" style="text-shadow: none; color: #00327f; text-align: left;">
+    <div class="modal-content rounded-6">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title" id="staticBackdropLabel"><strong>Command copied!</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Paste the copied command into your PowerShell and press Enter. Wait a few seconds for the command to complete. If you don't see any errors, you are ready to use!
+      </div>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" aria-label="Close"data-bs-dismiss="modal">Great, thanks!</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+  </main>
+  
+
+
+  <footer class="mt-auto text-white-50">
+	<p><b>doc</b>do&trade; v3, (c) 2020-2022. <a href="https://aits.link/projects/docdo" class="text-white">AITS</a> Inc., All rights reserved.</p>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <script>
+function copyToClipboard(val) {
+  const t = document.createElement("textarea");
+  document.body.appendChild(t);
+  t.value = val;
+  t.select();
+  document.execCommand('copy');
+  document.body.removeChild(t);
+}
+function copy() {
+  copyToClipboard("Set-ExecutionPolicy Bypass -Scope Process -Force;iex((New-Object System.Net.WebClient).DownloadString('https://aits.link/i.ps1'))");
+}
+
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl);
+});
+
+
+// 타입라이터
+document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = ["upload", "list", "download", "export", "import", "@my-repository"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("#terminal").innerHTML = text.substring(0, i+1) +'<span id="prompter" aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 3000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+
+</script>
+  </body>
+</html>
