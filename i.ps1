@@ -16,7 +16,7 @@ try {
 		$DIR.Attributes="Hidden"
 
 		$down = New-Object System.Net.WebClient
-		$url = 'https://aits.link/docdo.zip';
+		$url = 'https://docdolab.github.io/docdo.zip';
 		$file = $INCLUDE, "docdo.zip" -join '\';
 		$down.DownloadFile($url, $file);
 
